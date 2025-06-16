@@ -1,0 +1,88 @@
+/* Genel Sayfa Stili */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Başlık Stilleri */
+h1, h2, h3, h4 {
+    color: #2c3e50;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+h2 {
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* Resim Stili */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+/* Liste Stili */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Link Stili */
+a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Stili */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background: #2c3e50;
+    color: white;
+}
+
+/* İçerik Konteyneri */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* İletişim Sayfası İçin Stil */
+.contact-info {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Others Sayfası İçin Stil */
+.others-section {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}

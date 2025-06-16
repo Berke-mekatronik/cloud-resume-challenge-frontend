@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My Resume</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>Berke Ozturk</h2>
+        <img src="./img/BerkeOzturk.jpg" height="100" alt="Picture of Berke"/>
+
+        <p id="visitor-counter">Visitors: Loading...</p>
+
+        <h2>Certificates</h2>
+        <ul>
+            <li>AWS Cloud Practitioner </li>
+            <li>AWS Solutions Architect Associate: In Progress </li>
+        </ul>
+
+        <h2>Projects</h2>
+        <ul>
+            <li>Cloud Resume Challenge </li>
+        </ul>
+
+        <h2>Work Experience</h2>
+            <h3>Atos</h3>
+            <h4>SAP Application Specialist</h4>
+            <ul>
+                <li> Complete SAP PP, Customer service 2nd level support for Siemens Healthineers AG customer (TripleS project) </li>
+                <li>SAP PP Customizing </li>
+                <li>CR Implementation, collection of the business requirements, functional design creation, effort estimation, functional testing and change documents 
+                    maintenance in Solution Manager </li>
+                <li> Customer specific reports and interfaces error resolution </li>
+            </ul>
+            <h4>SAP Solution Specialist</h4>
+            <ul>
+                <li>Acquired training on SAP PP and QM modules, including theoretical and practical aspects </li>
+                <li>Gained hands-on experience by actively participating in a live project, having valuable insights </li>
+                <li>Conducted weekly presentations on SAP modules, concepts and practices </li>
+                <li>Collaborated within a multicultural team of six members, enhancing cross-cultural communication and teamwork skills0</li>
+                <li> Received weekly feedback from mentors to continuously improve and adapt in the role </li>
+            </ul>
+            <h3>Baykar Technology</h3>
+            <h4>Artificial Intelligence Software Intern</h4>
+            <ul>
+                <li>Gained high level experience on OpenAI Gym reinforcement learning environments and create our own environment in PyGame </li>
+                <li>Working on Q Learning and Deep Q Learning algorithms in PyGame environment</li>
+                <li>Synthetic data in computer vision with Unity Perception, modeling the obtained data in Facebook-Detectron2</li>
+                <li>Unit test framework research, features of frameworks and how they are integrated into the code</li>
+            </ul>
+            <h3>Istanbul Metropolitan Municipality</h3>
+            <h4>Software Developer Intern</h4>
+            <ul>
+                <li>Ensuring the integration of the previously used workshop tracking application to the new stock tracking application by using C# and SQL programs</li>
+            </ul>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>AWS | Python | Linux | Bash | Networking | SAP Production Planning | SAP SolMan | ABAP |  </li>
+        </ul>
+
+        <h2>Education</h2>
+        <h3>Marmara University</h3>
+        <h4>Bachelor of Science</h4>
+        <ul>
+            <li>Major in Mechatronics Engineering</li>
+            <li>Final Cumulative GPA: 2,57/4,00 </li>
+        </ul>
+
+        <a href="./contact.html">Contact Me</a>
+        <a href="./others.html">Others</a>
+
+        <script>
+            async function updateVisitorCounter() {
+                try {
+                    // Send a GET request to the API Gateway endpoint (triggers Lambda)
+                    const response = await fetch("https://h1m9w0eed0.execute-api.us-east-1.amazonaws.com/default/VisitorCounter", {
+                        method: "GET"
+                    });
+        
+                    // If the response is not OK, throw an error
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+        
+                    // Parse the JSON response from the Lambda function (e.g., {"count": 7})
+                    const data = await response.json();
+                    console.log("API Response:", data); // For debugging in the browser console
+        
+                    // Update the visitor counter text on the page
+                    document.getElementById('visitor-counter').innerText = `Visitors: ${data.count}`;
+                } catch (error) {
+                    // Handle errors (e.g., network issues, CORS errors)
+                    console.error("Error updating visitor count:", error);
+                    document.getElementById('visitor-counter').innerText = "Visitors: Error loading count";
+                }
+            }
+        
+            // Call the function when the page loads
+            updateVisitorCounter();
+        </script>
+
+        <footer>
+            <p>Copyright © 2024 Berke Ozturk. All Rights Reserved.</p>
+        </footer>
+
+    </body>
+    
+</html>
+
+
+
+
+
