@@ -1,4 +1,4 @@
-# Cloud Resume Challenge
+# Cloud Resume Challenge - Frontend
 This repository contains the frontend of my Cloud Resume Challenge project. The website is a static resume built with HTML, CSS, and JavaScript and is hosted entirely on AWS using modern cloud best practices. You can reach to the project from there: [Berke Ozturk Resume](https://s3.domain-of-berke.com/)
 
 This project is based on the original challenge created by **Forrest Brazeal**: [Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/)
